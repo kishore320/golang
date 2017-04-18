@@ -17,6 +17,13 @@ func main() {
 	})
 
 	fmt.Println("Substraction 10 from 100 using lambda :", res)
+
+	val := 10
+	passByValue(val)
+	fmt.Println("New value of 10 after pass by value call :", val) // val should still be 10
+
+	passByReference(&val)
+	fmt.Println("New value of 10 after pass by reference call :", val) // val should be 100
 }
 
 func add(a, b int) int {
@@ -41,4 +48,12 @@ func addMultiply(a, b int) (sum, product int) {
 // Pass in lambda which will be applied to the arguments a,b
 func applyLambda(a, b int, fn func(c, d int) int) int {
 	return fn(a, b)
+}
+
+func passByValue(val int) {
+	val = 100
+}
+
+func passByReference(val *int) {
+	*val = 100
 }
