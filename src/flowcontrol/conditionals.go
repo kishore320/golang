@@ -14,6 +14,7 @@ func demoIf() {
 	numCpus := runtime.NumCPU()
 
 	// No need of parentheses around condition. Curly braces are mandatory
+	// if numCpus := runtime.NumCPU(); numCpus > 1 { // in-line initialization can also be done like this
 	if numCpus > 1 {
 		fmt.Println("Your system is a multi CPU system")
 	} else {
