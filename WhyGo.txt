@@ -1,0 +1,6 @@
+- It is a system level programming language with modern standard library
+- It is fast, simple, powerful and safe
+- It has native concurrency support
+- It has Garbage Collection (manages memory)
+- Supports all the major OSs and has good cross-platform support
+- It is open source, getting developed rapidly and has good community support
