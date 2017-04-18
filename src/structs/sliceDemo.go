@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	slice := []int {3, 4, 12, 8, 90, 56, 77, 100, 34}
+	slice := []int{3, 4, 12, 8, 90, 56, 77, 100, 34}
 	slice1 := slice[4:6] // should have from index 4 to 5 (excluding 6)
-	slice2 := slice[:4] // should have from starting index (i.e 0) to 3 (excluding 4)
-	slice3 := slice[6:] // should have from index 6 to all the way end
+	slice2 := slice[:4]  // should have from starting index (i.e 0) to 3 (excluding 4)
+	slice3 := slice[6:]  // should have from index 6 to all the way end
 
 	fmt.Println("Original slice : ", slice)
 	fmt.Println("Slice1 slice[4:6] : ", slice1)
@@ -27,4 +27,3 @@ func main() {
 	a := make([]int, 10)
 	fmt.Println("Slice values after just allocating memory : ", a)
 }
-
