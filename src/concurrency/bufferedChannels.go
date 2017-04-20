@@ -5,7 +5,7 @@ import (
 )
 
 /*
-- By default, channels are not buffered (i.e) data can be send via channel only if there is a receiver.
+- By default, channels are not buffered (i.e) data can be sent via channel only if there is a receiver.
 Multiple data values can not be sent via channel if there is no corresponding receiver.
 - On the other hand, buffered channels can accept a limited set of values with out corresponding receivers for those values.
 - Senders will block only when the buffer is full.

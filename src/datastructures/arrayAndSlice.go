@@ -1,35 +1,56 @@
 package main
 
 import "fmt"
+import "../utils"
 
 func main() {
 	arrayDemo()
 	sliceDemo()
 	sliceTricks()
 	sliceOperations()
+	sliceLenVsCapacity()
 }
 
 func arrayDemo() {
-	fmt.Println("\nArray Demo : ")
-	fmt.Println("================")
-	array := [2]string{} // Array is a fixed size. We can not grow it.
+	utils.Header("Array :")
+
+	// Array is fixed size. We can not grow it.
+	var array [2]string
 	array[0] = "hello"
 	array[1] = "world"
-
 	fmt.Println(array)
+
+	// Another way to create an array
+	arrayAnother := [2]string{"hello", "world"}
+	for index, value := range arrayAnother {
+		fmt.Println(index, value)
+	}
 }
 
 func sliceDemo() {
-	fmt.Println("\nSlice Demo : ")
-	fmt.Println("================")
+	utils.Header("Slice :")
+
 	slice := []string{"hello", "world"}
-	slice = append(slice, "how", "are", "you") // Unlike arrays, slice can grow dynamically
+	// Unlike arrays, slice can grow dynamically
+	slice = append(slice, "how", "are", "you")
 	fmt.Println(slice)
+
+	// Create a slice with length 2 and capacity 5
+	anotherSlice := make([]int, 2, 5)
+	// should print just two 0s which is a length of the slice
+	fmt.Println(anotherSlice)
+
+	// initialize values
+	anotherSlice[0] = 1
+	anotherSlice[1] = 2
+	anotherSlice = append(anotherSlice, 3, 4, 5)
+	fmt.Println(anotherSlice)
 }
 
 func sliceOperations() {
-	fmt.Println("\nSlice Operations Demo : ")
-	fmt.Println("==========================")
+	utils.Header("Slice Operations :")
+
+	// Unlike arrays, while defining a slice, leave out the size
 	slice := []int{3, 4, 12, 8, 90, 56, 77, 100, 34}
 	slice1 := slice[4:6] // should have from index 4 to 5 (excluding 6)
 	slice2 := slice[:4]  // should have from starting index (i.e 0) to 3 (excluding 4)
@@ -50,7 +71,7 @@ func sliceOperations() {
 	slice = append(slice, 200, 345, 500)
 	fmt.Println("Slice after appending 200, 345, 500 : ", slice)
 
-	// Appropriate way to create slice and allocate memory
+	// Another way to create a slice which just allocates memory
 	a := make([]int, 5, 10) // Length of the slice is 5 and the capacity of the slice is 10
 	for i := 0; i < 5; i++ {
 		a[i] = i + 1
@@ -75,10 +96,11 @@ func sliceOperations() {
 }
 
 func sliceTricks() {
-	fmt.Println("\nSlice Tricks Demo : ")
-	fmt.Println("=======================")
+	utils.Header("Slice Tricks :")
+
 	slice := []int{1, 2, 3, 4, 5, 6, 7, 8}
 	fmt.Println("Original slice : ", slice)
+
 	// Remove elements from index 2 to 4
 	slice = append(slice[:2], slice[5:]...)
 	fmt.Println("Slice after removing elements from index 2 to 4 : ", slice)
@@ -86,5 +108,16 @@ func sliceTricks() {
 	// Remove single element say at index 1
 	slice = append(slice[:1], slice[2:]...)
 	fmt.Println("Slice after removing element at index 1 : ", slice)
+}
 
+func sliceLenVsCapacity() {
+	utils.Header("Slice: Length VS Capacity")
+	slice := make([]int, 2, 4)
+	for i := 1; i < 9; i++ {
+		slice = append(slice, i)
+		fmt.Println("Length :", len(slice), "Capacity :", cap(slice))
+	}
+
+	// What does it print ?
+	fmt.Println("Why leading zeros ? ", slice)
 }
