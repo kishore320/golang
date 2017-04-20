@@ -15,14 +15,14 @@ type LinkedList interface {
 
 type SLLNode struct {
 	next *SLLNode
-	val int
+	val  int
 }
 
 // SinglyLinkedList is implementing the LinkedList interface as it is implementing all the methods defined in the interface
 type SinglyLinkedList struct {
 	count int
-	head *SLLNode
-	tail *SLLNode
+	head  *SLLNode
+	tail  *SLLNode
 }
 
 // Implementing add(val int) method in LinkedList interface
@@ -49,11 +49,11 @@ func (sll *SinglyLinkedList) removeLast() int {
 	prevNode := sll.head
 	tmpHead := sll.head
 	for tmpHead.next != nil {
-		prevNode = tmpHead;
+		prevNode = tmpHead
 		tmpHead = tmpHead.next
 	}
 
-	if (sll.size() > 1) {
+	if sll.size() > 1 {
 		prevNode.next = nil
 		sll.tail = prevNode
 	} else {
