@@ -5,10 +5,13 @@ import "fmt"
 func main() {
 	arrayDemo()
 	sliceDemo()
+	sliceTricks()
 	sliceOperations()
 }
 
 func arrayDemo() {
+	fmt.Println("\nArray Demo : ")
+	fmt.Println("================")
 	array := [2]string{} // Array is a fixed size. We can not grow it.
 	array[0] = "hello"
 	array[1] = "world"
@@ -17,12 +20,16 @@ func arrayDemo() {
 }
 
 func sliceDemo() {
+	fmt.Println("\nSlice Demo : ")
+	fmt.Println("================")
 	slice := []string{"hello", "world"}
 	slice = append(slice, "how", "are", "you") // Unlike arrays, slice can grow dynamically
 	fmt.Println(slice)
 }
 
 func sliceOperations() {
+	fmt.Println("\nSlice Operations Demo : ")
+	fmt.Println("==========================")
 	slice := []int{3, 4, 12, 8, 90, 56, 77, 100, 34}
 	slice1 := slice[4:6] // should have from index 4 to 5 (excluding 6)
 	slice2 := slice[:4]  // should have from starting index (i.e 0) to 3 (excluding 4)
@@ -65,4 +72,19 @@ func sliceOperations() {
 
 	newSlice = append(newSlice, 6, 7, 8, 9)
 	fmt.Println("Contents of slice after append : ", newSlice)
+}
+
+func sliceTricks() {
+	fmt.Println("\nSlice Tricks Demo : ")
+	fmt.Println("=======================")
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	fmt.Println("Original slice : ", slice)
+	// Remove elements from index 2 to 4
+	slice = append(slice[:2], slice[5:]...)
+	fmt.Println("Slice after removing elements from index 2 to 4 : ", slice)
+
+	// Remove single element say at index 1
+	slice = append(slice[:1], slice[2:]...)
+	fmt.Println("Slice after removing element at index 1 : ", slice)
+
 }
