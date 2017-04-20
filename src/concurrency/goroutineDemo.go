@@ -1,5 +1,15 @@
 package main
 
+/*
+Goroutines are :
+- Lightweight "threads"
+- They are multiplexed onto multiple OS threads
+- Some of them can even run on the same thread
+- Go's runtime takes care of the complexity
+- Activated by the 'go' keyword
+- They are executed within the same address space as caller
+*/
+
 import (
 	"fmt"
 	"time"
