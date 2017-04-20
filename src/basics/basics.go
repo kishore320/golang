@@ -1,6 +1,7 @@
 package main // package main means, it is an executable not a library
 
 import (
+	"../utils"
 	"fmt"
 ) // import the required packages
 
@@ -55,7 +56,7 @@ func declareAndUseVariables() {
 
 	const pi float64 = 3.14
 
-	fmt.Println("\n================ Declaration and Use of Variables ========================================")
+	utils.Header("Declaration and Use of Variables")
 	fmt.Printf("Age = %d, ROI = %.2f, Having GoodDay? = %t, is it True? = %t, MyName = %s, Pi = %.2f \n",
 		age, rateOfInterest, havingGoodDay, isTrue, myName, pi)
 
@@ -70,7 +71,7 @@ func declareAndUseVariables() {
 }
 
 func arithmeticaOperations() {
-	fmt.Println("\n========== Arithmetic Operations ==========")
+	utils.Header("Arithmetic Operations")
 	fmt.Println("8 + 2 = ", 8+2)
 	fmt.Println("8 - 2 = ", 8-2)
 	fmt.Println("8 * 2 = ", 8*2)
@@ -79,7 +80,7 @@ func arithmeticaOperations() {
 }
 
 func logicalOperations() {
-	fmt.Println("\n========== Logical Operations ==========")
+	utils.Header("Logical Operations")
 	fmt.Println("true && false = ", true && false)
 	fmt.Println("true || false = ", true || false)
 	fmt.Println("!true = ", !true)
