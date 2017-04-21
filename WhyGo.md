@@ -1,9 +1,4 @@
-- It is a system level programming language with modern standard library
-- It is fast, simple, powerful and safe
-- It has native concurrency support
-- It has Garbage Collection (manages memory)
-- Supports all the major OSs and has good cross-platform support
-- It is open source, getting developed rapidly and has good community support
+## Why use Go ?
 - It is a system level programming language with modern standard library (suited for modern world of computing with efficiancy: cloud etc.).
 - It is fast, simple, powerful and safe. 
 - Faster builds (typically less than a second or two). Go's efficient, clean, simple dependency managment makes this possible.
@@ -15,7 +10,7 @@
 - Backed by GOOGLE
 - TIOBE index ranked 18th popular language in 2017 (opposed to 44th in 2016)
 
-Cons:
+## Some of the issues with Go :
 - Lack of third party libraries
 - Tedious error handling
 - No generics
