@@ -1,5 +1,5 @@
 ## Why use Go ?
-- It is a system level programming language with modern standard library (suited for modern world of computing with efficiancy: cloud etc.).
+- It is a system level programming language with modern standard library (suited for modern world of computing with efficiency: cloud etc.).
 - It is fast, simple, powerful and safe. 
 - Faster builds (typically less than a second or two). Go's efficient, clean, simple dependency managment makes this possible.
 - It has native concurrency support. goroutines and channels (go concurrency constructs) are primitive to the language.
