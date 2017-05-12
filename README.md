@@ -6,6 +6,9 @@ $ **git clone https://github.com/kishore320/golang.git**
 4) Thats it! You are ready to run the code samples available in the repo. For example, to run basics.go (from the cloned directory) just type   
 $ **go run basics/basics.go**
 
+## Youtube tutorial series
+- I have created a video tutorial series on 'Go Programming Language' in youtube which can be found at https://www.youtube.com/playlist?list=PL48QUD19IdhtkpvMILQuEWuzbgI4wF7dW
+
 ## What is Golang ?
 - Free and open source programming language created at Google in 2007.
 - It was announced in 2009 and was used in some some of the Google’s production systems.
