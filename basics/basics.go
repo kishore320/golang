@@ -16,19 +16,19 @@ comment
 
 // main function is called during execution
 func main() {
-	//helloWorld()
+	helloWorld()
 
-	//declareAndUseVariables()
+	declareAndUseVariables()
 
-	 //keywords()
+	keywords()
 
-	//dataTypes()
+	dataTypes()
 
 	arithmeticOperations()
 
-	//comparisionOperations()
+	comparisionOperations()
 
-	//logicalOperations()
+	logicalOperations()
 }
 
 func helloWorld() {
