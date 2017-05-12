@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	deferSimpleDemo()
 	deferLIFODemo()
+	nilValuePanicsDefer()
 
 	fmt.Println(safeDivision(2, 0))
 	// This will also print because safeDivision is taking care of recovering from panic
@@ -30,6 +31,13 @@ func deferLIFODemo() {
 	for i := 1; i <= 5; i++ {
 		defer fmt.Print(i, " ")
 	}
+}
+
+func nilValuePanicsDefer() {
+	var name string
+	defer fmt.Println(name)
+
+	fmt.Println("\nThis will not be printed as defer panics upfront")
 }
 
 func safeDivision(a, b int) int {
