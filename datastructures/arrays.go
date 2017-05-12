@@ -5,6 +5,11 @@ import (
 	"github.com/kishore320/golang/utils"
 )
 
+func main() {
+	arrayBasics()
+	demoOfDifference() // when compared to other languages say 'C', 'Java'
+}
+
 func arrayBasics() {
 	utils.Header("Array Basics")
 
@@ -80,9 +85,4 @@ func convertEvenToOdds(arr [2]int) {
 func convertEvenToOddsUsingPointer(arr *[2]int) {
 	arr[0] = 3
 	arr[1] = 5
-}
-
-func main() {
-	//arrayBasics()
-	demoOfDifference() // when compared to other languages say 'C', 'Java'
 }
