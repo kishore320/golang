@@ -1,4 +1,3 @@
-I started learning GO language and capturing all the coding that is done as a part of this learning under this project.
 ## Getting Started
 1) Download and Install Go : https://golang.org/doc/install
 2) Setup your Go workspace : https://golang.org/doc/code.html
